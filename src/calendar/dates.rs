@@ -1,10 +1,13 @@
 use time::Date;
 use time::Duration;
+use time::macros::format_description;
+use time::format_description::FormatItem;
 #[derive(Debug)]
 pub enum DateError{
     InvalidDate,
     CalculationError(String),
 }
+pub const DATE_FORMAT:&[FormatItem<'_>]= format_description!("[year][month][day]");
 pub trait Dates<T> {
     type OutputDate;
     fn next_nth_day(self, n: i32) -> Self::OutputDate;

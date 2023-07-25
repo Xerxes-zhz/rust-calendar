@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "python-test"
+version = "0.1.0"
+description = ""
+authors = ["zhanghaozhe <nkuzhanghaozhe@163.com>"]
+readme = "README.md"
+packages = [{include = "python_test"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+py-calendar = {path = "py_calendar/target/wheels/py_calendar-0.1.0-cp311-none-win_amd64.whl"}
+quantinv-common = {path = "lib/quantinv_common-0.0.2-py3-none-any.whl"}
+pyarrow = "^12.0.1"
+ipython = "^8.14.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
